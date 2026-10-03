@@ -1,4 +1,4 @@
-import { render, screen, fireEvent } from '@testing-library/react'
+import { act, render, screen, fireEvent } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { Header } from './Header'
@@ -19,7 +19,9 @@ const baseProps = {
 
 describe('Header', () => {
   beforeEach(() => {
+    // Reset the viewport to desktop before each test. This ensures that tests that rely on the mobile drawer being closed start in a consistent state.
     resetViewportMatches()
+    setViewportMatch(MOBILE_MEDIA_QUERY, false)
   })
 
   it('renders the brand name and logo mark', () => {
@@ -91,7 +93,12 @@ describe('Header', () => {
       const toggle = screen.getByRole('button', { name: 'Open menu' })
       expect(toggle).toHaveAttribute('aria-expanded', 'false')
 
-      await userEvent.click(toggle)
+      // act() wraps this interaction because the Header attaches vanilla
+      // document listeners in useEffect that call setState. userEvent's
+      // internal act() only covers React synthetic events, not those.
+      await act(async () => {
+        await userEvent.click(toggle)
+      })
 
       expect(screen.getByRole('button', { name: 'Close menu' })).toHaveAttribute(
         'aria-expanded',
@@ -102,9 +109,15 @@ describe('Header', () => {
     it('closes the drawer on Escape and returns focus to the toggle', async () => {
       render(<Header {...baseProps} />)
       const toggle = screen.getByRole('button', { name: 'Open menu' })
-      await userEvent.click(toggle)
 
-      await userEvent.keyboard('{Escape}')
+      await act(async () => {
+        await userEvent.click(toggle)
+      })
+
+      // The Escape handler is a vanilla document keydown listener.
+      await act(async () => {
+        await userEvent.keyboard('{Escape}')
+      })
 
       expect(toggle).toHaveAttribute('aria-expanded', 'false')
       expect(toggle).toHaveFocus()
@@ -117,10 +130,17 @@ describe('Header', () => {
           <button type="button">Outside</button>
         </>
       )
-      await userEvent.click(screen.getByRole('button', { name: 'Open menu' }))
+
+      await act(async () => {
+        await userEvent.click(screen.getByRole('button', { name: 'Open menu' }))
+      })
       expect(screen.getByRole('button', { name: 'Close menu' })).toBeInTheDocument()
 
-      fireEvent.mouseDown(screen.getByRole('button', { name: 'Outside' }))
+      // The outside-click handler is a vanilla document mousedown listener,
+      // so the synchronous fireEvent triggers a state update that needs act().
+      await act(async () => {
+        fireEvent.mouseDown(screen.getByRole('button', { name: 'Outside' }))
+      })
 
       expect(screen.getByRole('button', { name: 'Open menu' })).toHaveAttribute(
         'aria-expanded',
@@ -130,14 +150,19 @@ describe('Header', () => {
 
     it('closes the drawer when a nav link is clicked', async () => {
       render(<Header {...baseProps} />)
-      await userEvent.click(screen.getByRole('button', { name: 'Open menu' }))
 
-      // The nav link inside the mobile drawer
+      await act(async () => {
+        await userEvent.click(screen.getByRole('button', { name: 'Open menu' }))
+      })
+
       const mobileDrawer = document.getElementById(
         screen.getByRole('button', { name: 'Close menu' }).getAttribute('aria-controls') ?? ''
       )
       const link = mobileDrawer?.querySelector('a')
-      await userEvent.click(link as HTMLAnchorElement)
+
+      await act(async () => {
+        await userEvent.click(link as HTMLAnchorElement)
+      })
 
       expect(screen.getByRole('button', { name: 'Open menu' })).toHaveAttribute(
         'aria-expanded',
@@ -147,12 +172,14 @@ describe('Header', () => {
 
     it('closes the drawer when the viewport crosses the breakpoint', () => {
       render(<Header {...baseProps} />)
-      // open first
       fireEvent.click(screen.getByRole('button', { name: 'Open menu' }))
       expect(screen.getByRole('button', { name: 'Close menu' })).toBeInTheDocument()
 
-      // simulate resize to desktop
-      setViewportMatch(MOBILE_MEDIA_QUERY, false)
+      // Wrap the viewport change in act() so React flushes the state update
+      // triggered by the matchMedia listener before we assert.
+      act(() => {
+        setViewportMatch(MOBILE_MEDIA_QUERY, false)
+      })
 
       expect(screen.getByRole('button', { name: 'Open menu' })).toHaveAttribute(
         'aria-expanded',

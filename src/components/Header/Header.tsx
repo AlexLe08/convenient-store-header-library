@@ -101,9 +101,13 @@ export function Header({
           <span className={styles.brandName}>{brandName}</span>
         </a>
 
-        {/* Desktop nav — hidden on mobile via CSS */}
-        <nav className={styles.desktopNav} aria-label="Primary">
-          <NavLinks links={navLinks} />
+        <nav
+          id={isMobile ? menuId : undefined}
+          className={isMobile ? styles.mobileNav : styles.desktopNav}
+          data-open={isMobile && menuOpen ? 'true' : undefined}
+          aria-label="Primary"
+        >
+          <NavLinks links={navLinks} onNavigate={isMobile ? () => setMenuOpen(false) : undefined} />
         </nav>
 
         {/* Search — full width below on mobile, centered on desktop */}
@@ -124,17 +128,6 @@ export function Header({
             <CartIcon />
           </IconButton>
         </div>
-
-        {/* Mobile nav drawer */}
-        <nav
-          id={menuId}
-          className={styles.mobileNav}
-          data-open={menuOpen ? 'true' : undefined}
-          aria-label="Primary"
-          aria-hidden={!isMobile || !menuOpen}
-        >
-          <NavLinks links={navLinks} onNavigate={() => setMenuOpen(false)} />
-        </nav>
       </div>
     </header>
   )

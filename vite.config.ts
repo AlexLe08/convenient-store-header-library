@@ -14,16 +14,17 @@ export default defineConfig({
         'src/**/*.test.ts',
         'src/**/*.test.tsx',
         'src/**/*.stories.tsx',
-        'src/test-setup.ts'
+        'src/test-setup.ts',
+        'src/test-match-media.ts',
       ],
       rollupTypes: true,
-      tsconfigPath: './tsconfig.build.json'
-    })
+      tsconfigPath: './tsconfig.build.json',
+    }),
   ],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
-    }
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+    },
   },
   build: {
     sourcemap: true,
@@ -36,15 +37,15 @@ export default defineConfig({
         if (format === 'es') return 'index.js'
         if (format === 'cjs') return 'index.cjs'
         return `index.${format}.js`
-      }
+      },
     },
     rollupOptions: {
       external: [
         'react',
         'react-dom',
         'react/jsx-runtime',
-        'convenient-store-enterprise-ui-library'
-      ]
-    }
-  }
+        'convenient-store-enterprise-ui-library',
+      ],
+    },
+  },
 })

@@ -14,9 +14,15 @@
     },
     "./style.css": "./dist/style.css"
   },
-  "files": ["dist"],
-  "sideEffects": ["**/*.css"],
-  "engines": { "node": ">=18.0.0" },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "dev": "vite build --watch",
     "build": "vite build",
@@ -56,7 +62,8 @@
     "@vitest/coverage-v8": "^1.2.0",
     "@vitest/ui": "^1.2.0",
     "autoprefixer": "^10.5.5",
-    "convenient-store-enterprise-ui-library": "github:AlexLe08/convenient-store-enterprise-ui-library#v0.1.0",
+    "axe-core": "^4.10.0",
+    "convenient-store-enterprise-ui-library": "github:AlexLe08/convenient-store-enterprise-ui-library#v0.1.1",
     "eslint": "^8.56.0",
     "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-import": "^2.29.1",
@@ -74,6 +81,7 @@
     "vite": "^5.1.0",
     "vite-plugin-dts": "^3.7.0",
     "vite-plugin-lib-inject-css": "^2.1.0",
-    "vitest": "^1.2.0"
+    "vitest": "^1.2.0",
+    "vitest-axe": "^0.1.0"
   }
 }

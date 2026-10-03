@@ -5,6 +5,7 @@
     "src/**/*.test.tsx",
     "src/**/*.stories.ts",
     "src/**/*.stories.tsx",
-    "src/test-setup.ts"
+    "src/test-setup.ts",
+    "src/test-match-media.ts"
   ]
 }

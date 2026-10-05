@@ -1,0 +1,58 @@
+
+> convenient-store-header-library@0.1.0 build-storybook
+> storybook build --output-dir=/private/var/folders/wy/hpzhnzzn3p37lky7wy76w92m0000gp/T/chromatic--23399-Q6m6cmoFXd3p --webpack-stats-json=/private/var/folders/wy/hpzhnzzn3p37lky7wy76w92m0000gp/T/chromatic--23399-Q6m6cmoFXd3p
+
+@storybook/cli v7.6.24
+
+info => Cleaning outputDir: /private/var/folders/wy/hpzhnzzn3p37lky7wy76w92m0000gp/T/chromatic--23399-Q6m6cmoFXd3p
+info => Loading presets
+info => Building manager..
+info => Manager built (113 ms)
+info => Building preview..
+info => Copying static files: /Volumes/Satechi Inland/Development Projects/convenient-store-header-library/node_modules/@storybook/manager/static at /private/var/folders/wy/hpzhnzzn3p37lky7wy76w92m0000gp/T/chromatic--23399-Q6m6cmoFXd3p/sb-common-assets
+[36mvite v5.4.21 [32mbuilding for production...[36m[39m
+
+[36m[vite:lib-inject-css][39m [33mCurrent is not in library mode or building process, skip code injection.[39m
+
+transforming...
+[32m✓[39m 565 modules transformed.
+rendering chunks...
+computing gzip size...
+[2m../../../../private/var/folders/wy/hpzhnzzn3p37lky7wy76w92m0000gp/T/chromatic--23399-Q6m6cmoFXd3p/[22m[32miframe.html                                    [39m[1m[2m 12.58 kB[22m[1m[22m[2m │ gzip:   3.58 kB[22m
+[2m../../../../private/var/folders/wy/hpzhnzzn3p37lky7wy76w92m0000gp/T/chromatic--23399-Q6m6cmoFXd3p/[22m[2massets/[22m[35mHeader-DyDx7Hx_.css                     [39m[1m[2m  2.60 kB[22m[1m[22m[2m │ gzip:   0.98 kB[22m
+[2m../../../../private/var/folders/wy/hpzhnzzn3p37lky7wy76w92m0000gp/T/chromatic--23399-Q6m6cmoFXd3p/[22m[2massets/[22m[35mindex-C7FwgG-H.css                      [39m[1m[2m  3.40 kB[22m[1m[22m[2m │ gzip:   1.22 kB[22m
+[2m../../../../private/var/folders/wy/hpzhnzzn3p37lky7wy76w92m0000gp/T/chromatic--23399-Q6m6cmoFXd3p/[22m[2massets/[22m[36mpreview-C_FXXPzh.js                     [39m[1m[2m  0.17 kB[22m[1m[22m[2m │ gzip:   0.16 kB[22m
+[2m../../../../private/var/folders/wy/hpzhnzzn3p37lky7wy76w92m0000gp/T/chromatic--23399-Q6m6cmoFXd3p/[22m[2massets/[22m[36mWithTooltip-V3YHNWJZ-ByD5nzjD.js        [39m[1m[2m  0.39 kB[22m[1m[22m[2m │ gzip:   0.25 kB[22m
+[2m../../../../private/var/folders/wy/hpzhnzzn3p37lky7wy76w92m0000gp/T/chromatic--23399-Q6m6cmoFXd3p/[22m[2massets/[22m[36mindex--fhZTOoi.js                       [39m[1m[2m  0.44 kB[22m[1m[22m[2m │ gzip:   0.30 kB[22m
+[2m../../../../private/var/folders/wy/hpzhnzzn3p37lky7wy76w92m0000gp/T/chromatic--23399-Q6m6cmoFXd3p/[22m[2massets/[22m[36msyntaxhighlighter-MJWPISIS-CwTd0BQm.js  [39m[1m[2m  0.45 kB[22m[1m[22m[2m │ gzip:   0.28 kB[22m
+[2m../../../../private/var/folders/wy/hpzhnzzn3p37lky7wy76w92m0000gp/T/chromatic--23399-Q6m6cmoFXd3p/[22m[2massets/[22m[36mreact-18-DS-MVGx6.js                    [39m[1m[2m  0.55 kB[22m[1m[22m[2m │ gzip:   0.34 kB[22m
+[2m../../../../private/var/folders/wy/hpzhnzzn3p37lky7wy76w92m0000gp/T/chromatic--23399-Q6m6cmoFXd3p/[22m[2massets/[22m[36mpreview-8fs2TaV4.js                     [39m[1m[2m  0.58 kB[22m[1m[22m[2m │ gzip:   0.38 kB[22m
+[2m../../../../private/var/folders/wy/hpzhnzzn3p37lky7wy76w92m0000gp/T/chromatic--23399-Q6m6cmoFXd3p/[22m[2massets/[22m[36m_commonjsHelpers-BosuxZz1.js            [39m[1m[2m  0.69 kB[22m[1m[22m[2m │ gzip:   0.38 kB[22m
+[2m../../../../private/var/folders/wy/hpzhnzzn3p37lky7wy76w92m0000gp/T/chromatic--23399-Q6m6cmoFXd3p/[22m[2massets/[22m[36mindex-Bhqu_tAV.js                       [39m[1m[2m  0.79 kB[22m[1m[22m[2m │ gzip:   0.47 kB[22m
+[2m../../../../private/var/folders/wy/hpzhnzzn3p37lky7wy76w92m0000gp/T/chromatic--23399-Q6m6cmoFXd3p/[22m[2massets/[22m[36mpreview-Cv3rAi2i.js                     [39m[1m[2m  0.86 kB[22m[1m[22m[2m │ gzip:   0.55 kB[22m
+[2m../../../../private/var/folders/wy/hpzhnzzn3p37lky7wy76w92m0000gp/T/chromatic--23399-Q6m6cmoFXd3p/[22m[2massets/[22m[36mentry-preview-CbOF_t6d.js               [39m[1m[2m  1.15 kB[22m[1m[22m[2m │ gzip:   0.67 kB[22m
+[2m../../../../private/var/folders/wy/hpzhnzzn3p37lky7wy76w92m0000gp/T/chromatic--23399-Q6m6cmoFXd3p/[22m[2massets/[22m[36mpreview-Cskxv8CC.js                     [39m[1m[2m  1.19 kB[22m[1m[22m[2m │ gzip:   0.74 kB[22m
+[2m../../../../private/var/folders/wy/hpzhnzzn3p37lky7wy76w92m0000gp/T/chromatic--23399-Q6m6cmoFXd3p/[22m[2massets/[22m[36mpreview-CzBfFEX4.js                     [39m[1m[2m  3.19 kB[22m[1m[22m[2m │ gzip:   1.37 kB[22m
+[2m../../../../private/var/folders/wy/hpzhnzzn3p37lky7wy76w92m0000gp/T/chromatic--23399-Q6m6cmoFXd3p/[22m[2massets/[22m[36miframe-BoeYQQOl.js                      [39m[1m[2m  4.15 kB[22m[1m[22m[2m │ gzip:   1.76 kB[22m
+[2m../../../../private/var/folders/wy/hpzhnzzn3p37lky7wy76w92m0000gp/T/chromatic--23399-Q6m6cmoFXd3p/[22m[2massets/[22m[36mpreview-BnSX-W2M.js                     [39m[1m[2m  5.17 kB[22m[1m[22m[2m │ gzip:   2.36 kB[22m
+[2m../../../../private/var/folders/wy/hpzhnzzn3p37lky7wy76w92m0000gp/T/chromatic--23399-Q6m6cmoFXd3p/[22m[2massets/[22m[36mindex-BwDkhjyp.js                       [39m[1m[2m  7.18 kB[22m[1m[22m[2m │ gzip:   2.92 kB[22m
+[2m../../../../private/var/folders/wy/hpzhnzzn3p37lky7wy76w92m0000gp/T/chromatic--23399-Q6m6cmoFXd3p/[22m[2massets/[22m[36mpreview-B9C2S1aH.js                     [39m[1m[2m  7.62 kB[22m[1m[22m[2m │ gzip:   1.56 kB[22m
+[2m../../../../private/var/folders/wy/hpzhnzzn3p37lky7wy76w92m0000gp/T/chromatic--23399-Q6m6cmoFXd3p/[22m[2massets/[22m[36mpreview-BJKiUloN.js                     [39m[1m[2m  8.11 kB[22m[1m[22m[2m │ gzip:   3.08 kB[22m
+[2m../../../../private/var/folders/wy/hpzhnzzn3p37lky7wy76w92m0000gp/T/chromatic--23399-Q6m6cmoFXd3p/[22m[2massets/[22m[36mColor-6VNJS4EI-C0pvs49e.js              [39m[1m[2m 31.58 kB[22m[1m[22m[2m │ gzip:  11.82 kB[22m
+[2m../../../../private/var/folders/wy/hpzhnzzn3p37lky7wy76w92m0000gp/T/chromatic--23399-Q6m6cmoFXd3p/[22m[2massets/[22m[36mpreview-Djvq4YzM.js                     [39m[1m[2m 72.11 kB[22m[1m[22m[2m │ gzip:  24.36 kB[22m
+[2m../../../../private/var/folders/wy/hpzhnzzn3p37lky7wy76w92m0000gp/T/chromatic--23399-Q6m6cmoFXd3p/[22m[2massets/[22m[36m_getPrototype-4Gf7fkVK.js               [39m[1m[2m 77.22 kB[22m[1m[22m[2m │ gzip:  22.80 kB[22m
+[2m../../../../private/var/folders/wy/hpzhnzzn3p37lky7wy76w92m0000gp/T/chromatic--23399-Q6m6cmoFXd3p/[22m[2massets/[22m[36mHeader.stories-SSvWsi_B.js              [39m[1m[2m106.28 kB[22m[1m[22m[2m │ gzip:  36.66 kB[22m
+[2m../../../../private/var/folders/wy/hpzhnzzn3p37lky7wy76w92m0000gp/T/chromatic--23399-Q6m6cmoFXd3p/[22m[2massets/[22m[36mindex-aS4jWOJ1.js                       [39m[1m[2m134.00 kB[22m[1m[22m[2m │ gzip:  43.17 kB[22m
+[2m../../../../private/var/folders/wy/hpzhnzzn3p37lky7wy76w92m0000gp/T/chromatic--23399-Q6m6cmoFXd3p/[22m[2massets/[22m[36mentry-preview-docs-B33dSOYZ.js          [39m[1m[2m211.84 kB[22m[1m[22m[2m │ gzip:  65.56 kB[22m
+[2m../../../../private/var/folders/wy/hpzhnzzn3p37lky7wy76w92m0000gp/T/chromatic--23399-Q6m6cmoFXd3p/[22m[2massets/[22m[36mDocsRenderer-NNNQARDV-sLfMm4Y6.js       [39m[1m[33m543.39 kB[39m[22m[2m │ gzip: 176.87 kB[22m
+[2m../../../../private/var/folders/wy/hpzhnzzn3p37lky7wy76w92m0000gp/T/chromatic--23399-Q6m6cmoFXd3p/[22m[2massets/[22m[36maxe-1sa4mFFA.js                         [39m[1m[33m601.11 kB[39m[22m[2m │ gzip: 165.32 kB[22m
+[2m../../../../private/var/folders/wy/hpzhnzzn3p37lky7wy76w92m0000gp/T/chromatic--23399-Q6m6cmoFXd3p/[22m[2massets/[22m[36mformatter-SWP5E3XI-ByPOSr8T.js          [39m[1m[33m601.56 kB[39m[22m[2m │ gzip: 185.03 kB[22m
+[32m✓ built in 7.09s[39m
+info => Preview built (8.98 s)
+info => Output directory: /private/var/folders/wy/hpzhnzzn3p37lky7wy76w92m0000gp/T/chromatic--23399-Q6m6cmoFXd3p
+
+attention => Storybook now collects completely anonymous telemetry regarding usage.
+This information is used to shape Storybook's roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://storybook.js.org/telemetry
+

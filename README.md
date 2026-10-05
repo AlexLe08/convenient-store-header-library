@@ -1,5 +1,8 @@
 # Convenient Store Header Library
 
+[![Check](https://github.com/AlexLe08/convenient-store-header-library/actions/workflows/check.yml/badge.svg)](https://github.com/AlexLe08/convenient-store-header-library/actions/workflows/check.yml)
+[![Chromatic](https://img.shields.io/badge/Storybook-live%20preview-ff4785?logo=storybook)](https://main--6ac27a979af001941ad41822.chromatic.com)
+
 A responsive enterprise header component that composes the
 [Convenient Store Enterprise UI Library](https://github.com/AlexLe08/convenient-store-enterprise-ui-library)
 `SearchInput` into a production-shaped navigation shell.
@@ -21,7 +24,7 @@ A responsive enterprise header component that composes the
 
 ## Live Preview
 
-**→ [View the Storybook](https://main--<appId>.chromatic.com)** _(URL populated after Chromatic setup)_
+**→ [View the Storybook](https://main--6ac27a979af001941ad41822.chromatic.com)**
 
 No setup required. Step through the desktop header, mobile drawer, and the
 search dropdown rendered above the sticky header.

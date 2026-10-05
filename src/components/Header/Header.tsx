@@ -75,19 +75,20 @@ export function Header({
       className={[styles.header, sticky ? styles.sticky : '', className].filter(Boolean).join(' ')}
     >
       <div className={styles.inner}>
-        {/* Hamburger — mobile only */}
-        <div className={styles.hamburgerSlot}>
-          <IconButton
-            ref={toggleRef}
-            label={menuOpen ? 'Close menu' : 'Open menu'}
-            aria-expanded={menuOpen}
-            aria-controls={menuId}
-            onClick={handleToggle}
-            className={styles.hamburgerButton}
-          >
-            <HamburgerIcon open={menuOpen} />
-          </IconButton>
-        </div>
+        {isMobile && (
+          <div className={styles.hamburgerSlot}>
+            <IconButton
+              ref={toggleRef}
+              label={menuOpen ? 'Close menu' : 'Open menu'}
+              aria-expanded={menuOpen}
+              aria-controls={menuId}
+              onClick={handleToggle}
+              className={styles.hamburgerButton}
+            >
+              <HamburgerIcon open={menuOpen} />
+            </IconButton>
+          </div>
+        )}
 
         {/* Logo + brand */}
         <a href="/" className={styles.logo} aria-label={`${brandName} home`}>
@@ -112,7 +113,7 @@ export function Header({
 
         {/* Search — full width below on mobile, centered on desktop */}
         <div className={styles.searchSlot}>
-          <SearchInput {...searchProps} />
+          <SearchInput {...searchProps} floatingStrategy="fixed" />
         </div>
 
         {/* Actions */}

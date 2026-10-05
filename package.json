@@ -41,7 +41,7 @@
     "prepare": "husky && npm run build"
   },
   "peerDependencies": {
-    "convenient-store-enterprise-ui-library": "^0.1.0",
+    "convenient-store-enterprise-ui-library": "^0.1.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -64,7 +64,7 @@
     "autoprefixer": "^10.5.5",
     "axe-core": "^4.10.0",
     "chromatic": "^18.10.2",
-    "convenient-store-enterprise-ui-library": "github:AlexLe08/convenient-store-enterprise-ui-library#v0.1.2",
+    "convenient-store-enterprise-ui-library": "github:AlexLe08/convenient-store-enterprise-ui-library#v0.1.3",
     "eslint": "^8.56.0",
     "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-import": "^2.29.1",

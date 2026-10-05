@@ -172,19 +172,23 @@ describe('Header', () => {
 
     it('closes the drawer when the viewport crosses the breakpoint', () => {
       render(<Header {...baseProps} />)
+
+      // Open the drawer in mobile mode
       fireEvent.click(screen.getByRole('button', { name: 'Open menu' }))
       expect(screen.getByRole('button', { name: 'Close menu' })).toBeInTheDocument()
 
-      // Wrap the viewport change in act() so React flushes the state update
-      // triggered by the matchMedia listener before we assert.
+      // Cross the breakpoint back to desktop
       act(() => {
         setViewportMatch(MOBILE_MEDIA_QUERY, false)
       })
 
-      expect(screen.getByRole('button', { name: 'Open menu' })).toHaveAttribute(
-        'aria-expanded',
-        'false'
-      )
+      // The hamburger is unmounted entirely on desktop — that's the fix
+      // to satisfy a11y (landmark-unique, testing-library visibility).
+      // The desktop nav is now rendered in its place.
+      expect(screen.queryByRole('button', { name: 'Open menu' })).not.toBeInTheDocument()
+      expect(screen.queryByRole('button', { name: 'Close menu' })).not.toBeInTheDocument()
+      expect(screen.getByRole('navigation', { name: 'Primary' })).toBeInTheDocument()
+      expect(screen.getByRole('link', { name: 'Deals' })).toBeInTheDocument()
     })
   })
 })
